@@ -17,6 +17,50 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    PSLIB
+    <header class="header__navigation">
+        <img src="./sources/Favicon/android-chrome-384x384.png" alt="Logo">
+        <p>RBMK - 1800</p>
+        <div class="hamburgermenu">
+            <div class="hamburger__line--1"></div>
+            <div class="hamburger__line--2"></div>
+            <div class="hamburger__line--3"></div>
+        </div>
+        <menu class="changeable">
+            <nav>
+                <a href="">asdasd</a>
+                <a href="">asdasd</a>
+                <a href="">asdasd</a>
+                <a href="">asdasd</a>
+            </nav>
+        </menu>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script>
+        const hamburger = document.querySelector(".hamburgermenu");
+        const navigation = document.querySelector(".changeable");
+        const hamburger__line1 = document.querySelector(".hamburger__line--1");
+        const hamburger__line2 = document.querySelector(".hamburger__line--2");
+        const hamburger__line3 = document.querySelector(".hamburger__line--3");
+
+        function toggleMenu() {
+            if (hamburger.classList.contains("menuisopen")) {
+            hamburger.classList.remove("menuisopen");
+            hamburger__line1.classList.remove("active1");
+            hamburger__line2.classList.remove("active2");
+            hamburger__line3.classList.remove("active3");
+            navigation.classList.remove("nav--active");
+            }   else {
+                hamburger.classList.add("menuisopen");
+                navigation.classList.add("nav--active");
+                hamburger__line1.classList.add("active1");
+                hamburger__line2.classList.add("active2");
+                hamburger__line3.classList.add("active3");
+
+                }
+        }
+
+        hamburger.addEventListener("click", toggleMenu);
+    </script>
 </body>
 </html>
