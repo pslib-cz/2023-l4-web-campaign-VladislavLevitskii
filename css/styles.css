@@ -89,3 +89,63 @@ body {
 .nav--active {
     transform: translate(0);
 }
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu > * {
+    background-color: var(--Lapis_Lazuli);
+    color: var(--Orange);
+    padding: 15px 50px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+.menu .menu__buy {
+    background-color: var(--Chili_red);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu__buy p {
+    margin: 0;
+    color: var(--Honeydew);
+}
+
+main {
+    padding: 15px 15px 0 15px;
+    background-color: var(--Honeydew);
+}
+
+main > h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.mainphoto {
+    width: -webkit-fill-available;
+    margin: 15px 0;
+}
+
+.button__buy {
+    display: flex;
+    background-color: var(--Chili_red);
+    width: min-content;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.button__buy p {
+    margin: 0;
+    text-decoration: none;
+    color: var(--Honeydew);
+}

@@ -25,16 +25,33 @@
             <div class="hamburger__line--2"></div>
             <div class="hamburger__line--3"></div>
         </div>
-        <menu class="changeable">
-            <nav>
-                <a href="">asdasd</a>
-                <a href="">asdasd</a>
-                <a href="">asdasd</a>
-                <a href="">asdasd</a>
-            </nav>
-        </menu>
+        <nav class="changeable">
+            <menu class="menu">
+                <li><a href="#">Popis</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Galerie</a></li>
+                <li>
+                    <a href="#" class="menu__buy">
+                        <p>Koupit</p>
+                        <img src="./sources/ikona-košík.svg" alt="Icon">
+                    </a>
+                </li>
+            </menu>
+        </nav>
     </header>
-    <main></main>
+    <main>
+        <h1>Rychlovarná konvice RBMK - 1800</h1>
+        <p>Vítejte ve světě inovativního designu. Naše konvice spojuje špičkový vzhled s prvotřídní funkcionalitou. Užijte si nejen pohled na futuristický design, ale i perfektně zahřátou vodu pro váš každodenní rituál.</p>
+        <img class="mainphoto" src="./sources/mainphoto.png" alt="Mainphoto">
+        <a href="#" class="button__buy">
+            <p>Koupit</p>
+            <img src="./sources/ikona-košík.svg" alt="Icon">
+        </a>
+        <video width="320" height="240" autoplay muted>
+            <source src="./sources/480p.mp4" type="video/avi">
+            Your browser does not support the video tag.
+        </video>
+    </main>
     <footer></footer>
     <script>
         const hamburger = document.querySelector(".hamburgermenu");
@@ -56,7 +73,6 @@
                 hamburger__line1.classList.add("active1");
                 hamburger__line2.classList.add("active2");
                 hamburger__line3.classList.add("active3");
-
                 }
         }
 
