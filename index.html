@@ -13,6 +13,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./sources/Favicon/favicon-16x16.png">
     <link rel="manifest" href="./sources/Favicon/site.webmanifest">
     <link rel="mask-icon" href="./sources/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 </head>
@@ -103,31 +105,81 @@
             </video>
             <p>Nová konvice disponuje inovativním LED indikátorem, který mění barevnou indikaci podle teploty vody a při jejím ohřevu současně aktivuje detektor Geigera, čímž poskytuje zvukový signál</p>
         </div>
-        <article>
+        <article class="swiper">
             <h2>Galerie</h2>
-            <div class="galerie">
-                <img src="./sources/Fotka1.webp" class="galerie__foto" alt="Foto1">
-                <img src="./sources/Fotka2.webp" class="galerie__foto" alt="Foto2">
-                <img src="./sources/Fotka3.webp" class="galerie__foto" alt="Foto3">
-                <img src="./sources/Fotka4.webp" class="galerie__foto" alt="Foto4">
-                <img src="./sources/Fotka5.webp" class="galerie__foto" alt="Foto5">
-                <img src="./sources/Fotka6.webp" class="galerie__foto" alt="Foto6">
+            <div class="swiper-wrapper">
+                <img src="./sources/Fotka1.webp" class="swiper-slide" alt="Foto1">
+                <img src="./sources/Fotka2.webp" class="swiper-slide" alt="Foto2">
+                <img src="./sources/Fotka3.webp" class="swiper-slide" alt="Foto3">
+                <img src="./sources/Fotka4.webp" class="swiper-slide" alt="Foto4">
+                <img src="./sources/Fotka5.webp" class="swiper-slide" alt="Foto5">
+                <img src="./sources/Fotka6.webp" class="swiper-slide" alt="Foto6">
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
         </article>
         <article class="kontakt">
             <h3>Kontaktovat přímo prodejce</h3>
-            <input type="text" placeholder="Jméno">
-            <input type="text" placeholder="Příjmení">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Tel. číslo">
-            <input type="text" placeholder="Zpráva" class="kontakt__zprava">
+            <form class="kontakt__flex">
+                    <div class="kontakt__input">
+                        <input class="kontakt__text" type="text" name="name" placeholder="Jan Jech">
+                        <label>Jméno a přijmení</label>
+                    </div>
+                    <div class="kontakt__input">
+                        <input class="kontakt__text" type="text" name="tel" placeholder="+420 777 888 999">
+                        <label>Telefonní číslo</label>
+                    </div>
+                    <div class="kontakt__input">
+                        <input class="kontakt__text" type="text" name="email" placeholder="jan.jech@pslib.cz">
+                        <label>Email</label>
+                    </div>
+                    <div class="kontakt__input--zprava">
+                        <textarea class="kontakt__text kontakt__text--zprava" name="text" placeholder="Neváhejte napsat"></textarea>
+                        <label>Zpráva</label>
+                    </div>
+            </form>
             <a href="#" class="button__buy">
                 <p>Odeslat</p>
             </a>
-            <h3>Koupit v externím obchodě</h3>
+            <div class="external">
+                <h3>Koupit v externím obchodě</h3>
+                <a href="#" class="external__link">
+                    <img class="external__img" src="./sources/Aliexpress.svg" alt="AliExpress">
+                    <p class="external__text">AliExpress</p>
+                </a>
+                <a href="#" class="external__link">
+                    <img class="external__img" src="./sources/Amazon.svg" alt="Amazon">
+                    <p class="external__text">Amazon</p>
+                </a>
+                <a href="#" class="external__link">
+                    <img class="external__img" src="./sources/Heureka.svg" alt="Heureka">
+                    <p class="external__text">Heureka</p>
+                </a>
+            </div>
         </article>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer__logo">
+            <img src="./sources/Favicon/android-chrome-384x384.png" alt="Logo">
+            <p>RBMK - 1800</p>
+        </div>
+        <div class="menuandauthor">
+            <nav>
+                <menu>
+                    <li><a href="#">Popis</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Galerie</a></li>
+                    <li><a href="#">Koupit</a></li>
+                </menu>
+            </nav>
+            <div class="menuandauthor__author">
+                <img src="./sources/TheCat.png" alt="Logoofauthor">
+                <p>Made by <a href="https://github.com/VladislavLevitskii">Levad</a></p>
+            </div>
+        </div>
+    </footer>
     <script>
         const hamburger = document.querySelector(".hamburgermenu");
         const navigation = document.querySelector(".changeable");
@@ -152,6 +204,23 @@
         }
 
         hamburger.addEventListener("click", toggleMenu);
+
+        const swiper = new Swiper('.swiper', {
+              loop: true,
+
+              pagination: {
+                el: '.swiper-pagination',
+              },
+          
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+          
+              scrollbar: {
+                el: '.swiper-scrollbar',
+              },
+            });
     </script>
 </body>
 </html>
