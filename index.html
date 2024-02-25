@@ -14,14 +14,17 @@
     <link rel="manifest" href="./sources/Favicon/site.webmanifest">
     <link rel="mask-icon" href="./sources/Favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <header class="header__navigation">
-        <img src="./sources/Favicon/android-chrome-384x384.png" alt="Logo">
-        <p>RBMK - 1800</p>
+        <div class="logomain">
+            <img src="./sources/Favicon/android-chrome-384x384.png" alt="Logo">
+            <p>RBMK - 1800</p>
+        </div>
         <div class="hamburgermenu">
             <div class="hamburger__line--1"></div>
             <div class="hamburger__line--2"></div>
@@ -29,13 +32,13 @@
         </div>
         <nav class="changeable">
             <menu class="menu">
-                <li><a href="#">Popis</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Galerie</a></li>
+                <li><a href="#">Popis</a><div class="menu__underline"></div></li>
+                <li><a href="#">Design</a><div class="menu__underline"></div></li>
+                <li><a href="#">Galerie</a><div class="menu__underline"></div></li>
                 <li>
                     <a href="#" class="menu__buy">
                         <p>Koupit</p>
-                        <img src="./sources/ikona-košík.svg" alt="Icon">
+                        <div class="button__buy--button"></div>
                     </a>
                 </li>
             </menu>
@@ -43,59 +46,69 @@
     </header>
     <main>
         <article>
-            <h1>Rychlovarná konvice RBMK - 1800</h1>
-            <p>Vítejte ve světě inovativního designu. Naše konvice spojuje špičkový vzhled s prvotřídní funkcionalitou. Užijte si nejen pohled na futuristický design, ale i perfektně zahřátou vodu pro váš každodenní rituál.</p>
-            <img class="mainphoto" src="./sources/mainphoto.png" alt="Mainphoto">
-            <a href="#" class="button__buy">
-                <p>Koupit</p>
-                <img src="./sources/ikona-košík.svg" alt="Icon">
-            </a>
+            <div class="intro">
+                <div class="intro__text">
+                    <h1>Rychlovarná konvice RBMK - 1800</h1>
+                    <p>Vítejte ve světě inovativního designu. Naše konvice spojuje špičkový vzhled s prvotřídní funkcionalitou. Užijte si nejen pohled na futuristický design, ale i perfektně zahřátou vodu pro váš každodenní rituál.</p>
+                    <img class="mainphoto wtf1" src="./sources/mainphoto.png" alt="Mainphoto">
+                    <a href="#" class="button__buy">
+                        <p>Koupit</p>
+                        <div class="button__buy--button"></div>
+                    </a>
+                </div>
+                <img class="mainphoto wtf2" src="./sources/mainphoto.png" alt="Mainphoto">
+            </div>
         </article>
-        <article>
-            <video class="videorotate" autoplay muted loop>
-                <source src="./sources/video480p.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="video__popis">3D dynamický náhled konvice</p>
-            <h2 class="charakteristika__h2">Charakteristika konvice:</h2>
-            <div class="charakteristika__text">
-                <p class="charakteristika__text--big">Cena:</p>
-                <p class="charakteristika__text--big">1499,- Kč</p>
+        <article class="popis">
+            <div class="video">
+                <video class="videorotate" autoplay muted loop>
+                    <source src="./sources/videofull.mp4" type="video/mp4" media="(min-width: 600px)">
+                    <source src="./sources/video480p.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="video__popis">3D dynamický náhled konvice</p>
             </div>
-            <div class="charakteristika__text">
-                <p class="charakteristika__text--big">Hmotnost</p>
-            </div>
-            <div class="charakteristika__text charakteristika__text--leftpadding">
-                <p>celková</p>
-                <p>1.5 kg</p>
-            </div>
-            <div class="charakteristika__text charakteristika__text--leftpadding">
-                <p>přenosná</p>
-                <p>0.5 kg</p>
-            </div>
-            <div class="charakteristika__text charakteristika__text--leftpadding">
-                <p>s vodou (2 l)</p>
-                <p>2.5 kg</p>
-            </div>
-            <div class="charakteristika__text">
-                <p class="charakteristika__text--big">Materiál</p>
-            </div>
-            <div class="charakteristika__text charakteristika__text--right">
-                <p>Plast (PP)</p>
-            </div>
-            <div class="charakteristika__text charakteristika__text--right">
-                <p>Nerezavá ocel</p>
-            </div>
-            <div class="charakteristika__text charakteristika__text--right">
-                <p>Sklo</p>
-            </div>
-            <div class="charakteristika__text">
-                <p class="charakteristika__text--big">Příkon:</p>
-                <p class="charakteristika__text--big">1800 W</p>
-            </div>
-            <div class="charakteristika__text">
-                <p class="charakteristika__text--big">Objem vody</p>
-                <p class="charakteristika__text--big">max. 2l</p>
+            <div class="charakteristika">
+                <h2 class="charakteristika__h2">Charakteristika konvice:</h2>
+                <div class="charakteristika__text">
+                    <p class="charakteristika__text--big">Cena:</p>
+                    <p class="charakteristika__text--big">1499,- Kč</p>
+                </div>
+                <div class="charakteristika__text">
+                    <p class="charakteristika__text--big">Hmotnost</p>
+                </div>
+                <div class="charakteristika__text charakteristika__text--leftpadding">
+                    <p>celková</p>
+                    <p>1.5 kg</p>
+                </div>
+                <div class="charakteristika__text charakteristika__text--leftpadding">
+                    <p>přenosná</p>
+                    <p>0.5 kg</p>
+                </div>
+                <div class="charakteristika__text charakteristika__text--leftpadding">
+                    <p>s vodou (2 l)</p>
+                    <p>2.5 kg</p>
+                </div>
+                <div class="charakteristika__text">
+                    <p class="charakteristika__text--big">Materiál</p>
+                </div>
+                <div class="charakteristika__text charakteristika__text--right">
+                    <p>Plast (PP)</p>
+                </div>
+                <div class="charakteristika__text charakteristika__text--right">
+                    <p>Nerezavá ocel</p>
+                </div>
+                <div class="charakteristika__text charakteristika__text--right">
+                    <p>Sklo</p>
+                </div>
+                <div class="charakteristika__text">
+                    <p class="charakteristika__text--big">Příkon:</p>
+                    <p class="charakteristika__text--big">1800 W</p>
+                </div>
+                <div class="charakteristika__text">
+                    <p class="charakteristika__text--big">Objem vody</p>
+                    <p class="charakteristika__text--big">max. 2l</p>
+                </div>
             </div>
         </article>
         <div class="colour">
@@ -221,6 +234,10 @@
                 el: '.swiper-scrollbar',
               },
             });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script type="text/javascript">
+       lightGallery(document.querySelector('.swiper-wrapper'));
     </script>
 </body>
 </html>
