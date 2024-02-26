@@ -6,8 +6,25 @@
     --Black: #000000;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  ::-webkit-scrollbar-track {
+    background: var(--Honeydew); 
+}
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--Lapis_Lazuli); 
+}
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--Black); 
+}
+
 html {
     font-family: "Fira Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -254,9 +271,16 @@ article {
 
 h2 {
     text-align: center;
+    margin: 50px 0;
 }
 
 .kontakt {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.kontakt__left {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -276,6 +300,12 @@ h2 {
 
 .kontakt__input {
     position: relative;
+}
+
+.kontakt__line {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .kontakt__text {
@@ -374,8 +404,9 @@ footer {
 }
 
 .footer__logo {
+    gap: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .footer__logo > img {
@@ -439,6 +470,28 @@ footer {
 
 .wtf2 {
     display: none;
+}
+
+.galerie {
+    display: none;
+}
+
+@media only screen and (min-width: 620px) {
+
+    .menuandauthor {
+        justify-content: center;
+        gap: 150px;
+    }
+
+    .menuandauthor nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menuandauthor menu {
+        flex-direction: row;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -584,6 +637,161 @@ footer {
 
     .colour {
         flex-direction: row;
+        padding: 40px;
+        gap: 200px;
+    }
+
+    .skew {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background: linear-gradient(to top right, var(--Lapis_Lazuli) 50%, rgba(0, 0, 0, 0) 51%);
+    }
+
+    .opposite {
+        background: linear-gradient(to top right, rgba(0, 0, 0, 0) 50%, var(--Lapis_Lazuli) 51%);
+    }
+
+    .opposite1 {
+        background: linear-gradient(to top left, var(--Lapis_Lazuli) 50%, rgba(0, 0, 0, 0) 51%);
+    }
+
+    .swiper .swiper-wrapper {
+        display: none;
+    }
+
+    .swiper .swiper-pagination {
+        display: none;
+    }
+
+    .swiper .swiper-button-prev {
+        display: none;
+    }
+
+    .swiper .swiper-button-next {
+        display: none;
+    }
+
+    .swiper .swiper-scrollbar {
+        display: none;
+    }
+
+    .galerie {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        padding: 0 50px 100px 50px;
+    }
+
+    .galerie img {
+        width: 100%;
+    }
+
+    .kontakt {
+        background-color: var(--Lapis_Lazuli);
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 50px;
+    }
+
+    .kontakt__input {
+        flex-grow: 1;
+    }
+
+    .kontakt__left {
+        flex-grow: 1;
+        max-width: 700px;
+    }
+
+    .kontakt h3 {
+        color: var(--Honeydew);
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .kontakt__line {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .kontakt__text {
+        background-color: var(--Lapis_Lazuli);
+        border: 3px solid var(--Honeydew);
+    }
+
+    .kontakt__text[type=text] {
+        color: var(--Honeydew);
+    }
+
+    .kontakt__text::placeholder {
+        color: var(--Honeydew);
+    }
+
+    .kontakt label {
+        background-color: var(--Lapis_Lazuli);
+        color: var(--Honeydew);
+    }
+
+    .kontakt__text--zprava[name=text] {
+        color: var(--Honeydew);
+    }
+
+    .external {
+        justify-content: start;
+        gap: 50px;
+        position: relative;
+        top: -50px;
+    }
+
+    .external--flex {
+        display: flex;
+        gap: 50px;
+    }
+
+    .external__text {
+        color: var(--Honeydew);
+        font-weight: normal;
+    }
+
+    .external__img {
+        height: 150px;
+    }
+
+    .send:hover {
+        background-color: var(--Honeydew);
+    }
+
+    .send:hover p {
+        color: var(--Black);
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 50px;
+    }
+
+    .footer__logo {
+        align-items: center;
+    }
+
+    .footer__logo > img {
+        height: 100px;
+    }
+
+    .menuandauthor {
+        gap: 150px;
+        padding: 0;
+    }
+
+    footer .menu__underline {
+        background-color: var(--Honeydew);
+    }
+
+    footer menu li:hover .menu__underline {
+        width: 100%;
+        transition: .5s;
     }
 }
 
@@ -596,6 +804,8 @@ footer {
     .intro {
         padding: 0 115px;
         justify-content: space-between;
+        max-width: 1725px;
+        margin: 0 auto;
     }
 
     .mainphoto {
@@ -605,5 +815,27 @@ footer {
     .popis {
         padding-left: 115px;
         padding-right: 115px;
+    }
+
+    .colour {
+        padding-left: 300px;
+        padding-right: 300px;
+        height: 400px;
+    }
+
+    .skew {
+        height: 100px;
+    }
+
+    .galerie {
+        padding: 0 115px 100px 115px;
+    }
+
+    .kontakt {
+        padding: 30px 130px;
+    }
+
+    footer {
+        padding: 30px 130px;
     }
 }

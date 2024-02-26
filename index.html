@@ -32,11 +32,11 @@
         </div>
         <nav class="changeable">
             <menu class="menu">
-                <li><a href="#">Popis</a><div class="menu__underline"></div></li>
-                <li><a href="#">Design</a><div class="menu__underline"></div></li>
-                <li><a href="#">Galerie</a><div class="menu__underline"></div></li>
+                <li><a href="#1">Popis</a><div class="menu__underline"></div></li>
+                <li><a href="#2">Design</a><div class="menu__underline"></div></li>
+                <li><a href="#3">Galerie</a><div class="menu__underline"></div></li>
                 <li>
-                    <a href="#" class="menu__buy">
+                    <a href="#4" class="menu__buy">
                         <p>Koupit</p>
                         <div class="button__buy--button"></div>
                     </a>
@@ -51,7 +51,7 @@
                     <h1>Rychlovarná konvice RBMK - 1800</h1>
                     <p>Vítejte ve světě inovativního designu. Naše konvice spojuje špičkový vzhled s prvotřídní funkcionalitou. Užijte si nejen pohled na futuristický design, ale i perfektně zahřátou vodu pro váš každodenní rituál.</p>
                     <img class="mainphoto wtf1" src="./sources/mainphoto.png" alt="Mainphoto">
-                    <a href="#" class="button__buy">
+                    <a href="#4" class="button__buy">
                         <p>Koupit</p>
                         <div class="button__buy--button"></div>
                     </a>
@@ -59,7 +59,7 @@
                 <img class="mainphoto wtf2" src="./sources/mainphoto.png" alt="Mainphoto">
             </div>
         </article>
-        <article class="popis">
+        <article class="popis" id="1">
             <div class="video">
                 <video class="videorotate" autoplay muted loop>
                     <source src="./sources/videofull.mp4" type="video/mp4" media="(min-width: 600px)">
@@ -111,15 +111,17 @@
                 </div>
             </div>
         </article>
-        <div class="colour">
+        <div class="skew"></div>
+        <article class="colour" id="2">
             <video class="colour__video" autoplay muted loop>
                 <source src="./sources/video480p2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <p>Nová konvice disponuje inovativním LED indikátorem, který mění barevnou indikaci podle teploty vody a při jejím ohřevu současně aktivuje detektor Geigera, čímž poskytuje zvukový signál</p>
-        </div>
+        </article>
+        <div class="skew opposite"></div>
         <article class="swiper">
-            <h2>Galerie</h2>
+            <h2 id="3">Galerie</h2>
             <div class="swiper-wrapper">
                 <img src="./sources/Fotka1.webp" class="swiper-slide" alt="Foto1">
                 <img src="./sources/Fotka2.webp" class="swiper-slide" alt="Foto2">
@@ -128,48 +130,69 @@
                 <img src="./sources/Fotka5.webp" class="swiper-slide" alt="Foto5">
                 <img src="./sources/Fotka6.webp" class="swiper-slide" alt="Foto6">
             </div>
+            <div class="galerie">
+                <img src="./sources/Fotka1.webp" alt="Foto1">
+                <img src="./sources/Fotka2.webp" alt="Foto2">
+                <img src="./sources/Fotka3.webp" alt="Foto3">
+                <img src="./sources/Fotka4.webp" alt="Foto4">
+                <img src="./sources/Fotka5.webp" alt="Foto5">
+                <img src="./sources/Fotka6.webp" alt="Foto6">
+            </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-scrollbar"></div>
         </article>
-        <article class="kontakt">
-            <h3>Kontaktovat přímo prodejce</h3>
-            <form class="kontakt__flex">
-                    <div class="kontakt__input">
-                        <input class="kontakt__text" type="text" name="name" placeholder="Jan Jech">
-                        <label>Jméno a přijmení</label>
-                    </div>
-                    <div class="kontakt__input">
-                        <input class="kontakt__text" type="text" name="tel" placeholder="+420 777 888 999">
-                        <label>Telefonní číslo</label>
-                    </div>
-                    <div class="kontakt__input">
-                        <input class="kontakt__text" type="text" name="email" placeholder="jan.jech@pslib.cz">
-                        <label>Email</label>
-                    </div>
-                    <div class="kontakt__input--zprava">
-                        <textarea class="kontakt__text kontakt__text--zprava" name="text" placeholder="Neváhejte napsat"></textarea>
-                        <label>Zpráva</label>
-                    </div>
-            </form>
-            <a href="#" class="button__buy">
-                <p>Odeslat</p>
-            </a>
+        <div class="skew opposite1"></div>
+        <article class="kontakt" id="4">
+            <div class="kontakt__left">
+                <h3>Kontaktovat přímo prodejce</h3>
+                <form class="kontakt__flex">
+                        <div class="kontakt__line">
+                            <div class="kontakt__input">
+                                <input class="kontakt__text" type="text" name="name" placeholder="Jan">
+                                <label>Jméno</label>
+                            </div>
+                            <div class="kontakt__input">
+                                <input class="kontakt__text" type="text" name="last name" placeholder="Jech">
+                                <label>Příjmení</label>
+                            </div>
+                        </div>
+                        <div class="kontakt__line">
+                            <div class="kontakt__input">
+                                <input class="kontakt__text" type="text" name="phone" placeholder="+420 777 888 999">
+                                <label>Telefonní číslo</label>
+                            </div>
+                            <div class="kontakt__input">
+                                <input class="kontakt__text" type="text" name="email" placeholder="jan.jech@pslib.cz">
+                                <label>Email</label>
+                            </div>
+                        </div>
+                        <div class="kontakt__input--zprava">
+                            <textarea class="kontakt__text kontakt__text--zprava" name="text" placeholder="Neváhejte napsat"></textarea>
+                            <label>Zpráva</label>
+                        </div>
+                </form>
+                <a href="#" class="button__buy send">
+                    <p>Odeslat</p>
+                </a>
+            </div>
             <div class="external">
                 <h3>Koupit v externím obchodě</h3>
-                <a href="#" class="external__link">
-                    <img class="external__img" src="./sources/Aliexpress.svg" alt="AliExpress">
-                    <p class="external__text">AliExpress</p>
-                </a>
-                <a href="#" class="external__link">
-                    <img class="external__img" src="./sources/Amazon.svg" alt="Amazon">
-                    <p class="external__text">Amazon</p>
-                </a>
-                <a href="#" class="external__link">
-                    <img class="external__img" src="./sources/Heureka.svg" alt="Heureka">
-                    <p class="external__text">Heureka</p>
-                </a>
+                <div class="external--flex">
+                    <a href="#" class="external__link">
+                        <img class="external__img" src="./sources/Aliexpress.svg" alt="AliExpress">
+                        <p class="external__text">AliExpress</p>
+                    </a>
+                    <a href="#" class="external__link">
+                        <img class="external__img" src="./sources/Amazon.svg" alt="Amazon">
+                        <p class="external__text">Amazon</p>
+                    </a>
+                    <a href="#" class="external__link">
+                        <img class="external__img" src="./sources/Heureka.svg" alt="Heureka">
+                        <p class="external__text">Heureka</p>
+                    </a>
+                </div>
             </div>
         </article>
     </main>
@@ -181,10 +204,10 @@
         <div class="menuandauthor">
             <nav>
                 <menu>
-                    <li><a href="#">Popis</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Galerie</a></li>
-                    <li><a href="#">Koupit</a></li>
+                    <li><a href="#1">Popis</a><div class="menu__underline"></div></li>
+                    <li><a href="#2">Design</a><div class="menu__underline"></div></li>
+                    <li><a href="#3">Galerie</a><div class="menu__underline"></div></li>
+                    <li><a href="#4">Koupit</a><div class="menu__underline"></div></li>
                 </menu>
             </nav>
             <div class="menuandauthor__author">
@@ -238,6 +261,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
     <script type="text/javascript">
        lightGallery(document.querySelector('.swiper-wrapper'));
+       lightGallery(document.querySelector('.galerie'));
     </script>
 </body>
 </html>
